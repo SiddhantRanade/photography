@@ -2313,7 +2313,7 @@
   dependencies:
     "ret" "~0.1.10"
 
-"sass@^1.26.3":
+"sass@^1.26.3", "sass@^1.56.1":
   "integrity" "sha512-VpEyKpyBPCxE7qGDtOcdJ6fFbcpOM+Emu7uZLxVrkX8KVU/Dp5UF7WLvzqRuUhB6mqqQt1xffLoG+AndxTZrCQ=="
   "resolved" "https://registry.npmjs.org/sass/-/sass-1.56.1.tgz"
   "version" "1.56.1"

@@ -2,7 +2,7 @@
 
 var gulp = require('gulp');
 var imageResize = require('gulp-image-resize');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var del = require('del');
@@ -47,8 +47,7 @@ gulp.task('minify-js', function () {
 });
 
 // default task
-// gulp.task('default', gulp.series('del'));
-gulp.task('default', gulp.series('resize'));
+gulp.task('default', gulp.series('del'));
 
 // scss compile task
 gulp.task('compile-sass', gulp.parallel('sass', 'minify-js'));
