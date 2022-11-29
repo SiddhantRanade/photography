@@ -8,7 +8,7 @@ var rename = require('gulp-rename');
 var del = require('del');
 
 gulp.task('resize', function () {
-    return gulp.src('images/*.*')
+    return gulp.src('images/*/*.*')
         .pipe(imageResize({
             width: 2048,
             imageMagick: true
@@ -47,7 +47,8 @@ gulp.task('minify-js', function () {
 });
 
 // default task
-gulp.task('default', gulp.series('del'));
+// gulp.task('default', gulp.series('del'));
+gulp.task('default', gulp.series('resize'));
 
 // scss compile task
 gulp.task('compile-sass', gulp.parallel('sass', 'minify-js'));
