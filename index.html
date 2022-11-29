@@ -33,8 +33,8 @@ layout: default
         {% for image in site.static_files %}
         {% if image.path contains 'fulls' and image.path contains album %}
         <article class="thumb">
-            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ album }}/{{ image.name }}" class="image">
-                <img src="'{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ album }}/{{ image.name }}'" alt=""
+            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ album | uri_escape }}/{{ image.name }}" class="image">
+                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ album | uri_escape }}/{{ image.name }}" alt=""
                      data-name="nodata"/></a>
             <!--<h2></h2>
             <p></p>-->
